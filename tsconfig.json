@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "types": ["node", "jest", "babel__generator"],
     "target": "es5",
     "module": "commonjs",
     "lib": ["es6"],
