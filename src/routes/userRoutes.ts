@@ -1,9 +1,7 @@
 import { Router } from 'express';
-import User from '../models/userModel';
+import { getUser, updateUser } from '../controllers/userController';
 
 export default (router: Router) => {
-  router.get('/users', async (req, res) => {
-    const users = await User.find();
-    res.json(users);
-  });
+  router.get('/user/:id', getUser);
+  router.patch('/user/:id', updateUser);
 };

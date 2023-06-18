@@ -25,11 +25,10 @@ const register = async (req: Request, res: Response) => {
         .json({ message: 'Missing required parameters', missingParams });
     }
 
-    // Check if the fullName is already taken
-
+    // Check if the fullName or email is already taken
     const fullNameExists = await User.findOne({ fullName });
-
     const emailExists = await User.findOne({ email });
+
     if (fullNameExists || emailExists) {
       return res.status(409).json({ message: 'user already exists' });
     }
@@ -43,7 +42,6 @@ const register = async (req: Request, res: Response) => {
     const newUser = new User({
       fullName,
       email,
-
       password: hashedPassword,
     });
 
