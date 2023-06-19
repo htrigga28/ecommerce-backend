@@ -27,3 +27,11 @@ Content-Type: application/json
   "email": "not@test.com",
   "password": "noneya"
 }
+
+###
+POST http://localhost:5000/auth/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vdEB0ZXN0LmNvbSIsImlhdCI6MTY4NzE5ODcwMywiZXhwIjoxNjg3ODAzNTAzfQ.HoM2HfL2wRz_6fjI8d8QO190HSx6aqZXtjYRQBg8w28"
+}

@@ -105,6 +105,30 @@ const login = async (req: Request, res: Response) => {
   }
 };
 
-const logout = async (req: Request, res: Response) => {};
+const logout = async (req: Request, res: Response) => {
+  const { token } = req.body;
+
+  try {
+    const user = await User.findOne({ 'authentication.token': token }).select(
+      '+authentication.token'
+    );
+
+    if (!user) {
+      return res.status(400).json({ message: 'Invalid token' });
+    }
+
+    if (!user?.authentication?.token) {
+      return res.status(400).json({ message: 'User is not logged in' });
+    }
+
+    user.authentication.token = '';
+    await user.save();
+
+    res.status(200).json({ message: 'Logout successful' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
 
 export { register, login, logout };
