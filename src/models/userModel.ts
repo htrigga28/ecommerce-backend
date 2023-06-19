@@ -10,10 +10,16 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    password: {
-      type: String,
-      required: true,
-      select: false,
+    authentication: {
+      password: {
+        type: String,
+        required: true,
+        select: false,
+      },
+      token: {
+        type: String,
+        select: false,
+      },
     },
     firstName: {
       type: String,

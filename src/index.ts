@@ -1,7 +1,7 @@
+import 'dotenv/config';
 import express from 'express';
 import mongoose from 'mongoose';
 import router from './routes';
-import bodyParser from 'body-parser';
 
 const app = express();
 

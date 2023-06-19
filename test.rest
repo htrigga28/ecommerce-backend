@@ -1,4 +1,4 @@
-GET http://localhost:5000/user/6484f28672d93d676ed6fd67
+GET http://localhost:5000/user/649056314656199bf5923662
 
 ###
 PATCH  http://localhost:5000/user/6484f28672d93d676ed6fd67
@@ -14,7 +14,16 @@ POST http://localhost:5000/auth/signup
 Content-Type: application/json
 
 {
-  "fullName": "test john",
-  "email": "testy@test.com",
+  "fullName": "not john",
+  "email": "not@test.com",
+  "password": "noneya"
+}
+
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "not@test.com",
   "password": "noneya"
 }

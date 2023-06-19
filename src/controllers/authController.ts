@@ -1,6 +1,9 @@
 import { Request, Response } from 'express';
 import User from '../models/userModel';
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+
+const jwtSecret = process.env.JWT_SECRET;
 
 const register = async (req: Request, res: Response) => {
   try {
@@ -42,13 +45,18 @@ const register = async (req: Request, res: Response) => {
     const newUser = new User({
       fullName,
       email,
-      password: hashedPassword,
+      authentication: {
+        password: hashedPassword,
+      },
     });
 
     // Save the user to the database
     await newUser.save();
 
-    res.status(201).json({ message: 'User created successfully' }).end();
+    res
+      .status(201)
+      .json({ message: 'User created successfully', newUser })
+      .end();
   } catch (error) {
     res.status(500).json({ message: error });
   }
@@ -57,10 +65,43 @@ const register = async (req: Request, res: Response) => {
 const login = async (req: Request, res: Response) => {
   const { email, password } = req.body;
 
-  if (!email || !password) {
-    return res
-      .status(400)
-      .json({ message: 'Please provide email and password' });
+  try {
+    const user = await User.findOne({ email }).select(
+      '+authentication.password +authentication.token'
+    );
+
+    if (!user) {
+      return res.status(400).json({ message: "User doesn't exist" });
+    }
+
+    if (!jwtSecret || !user.authentication?.password) {
+      return res.status(500).json({ message: 'Internal server error' });
+    }
+
+    const passwordMatches = await bcrypt.compare(
+      password,
+      user.authentication.password
+    );
+
+    if (!passwordMatches) {
+      return res.status(401).json({ message: 'Incorrect password' });
+    }
+
+    if (user.authentication.token) {
+      return res.status(400).json({ message: 'Already logged in' });
+    }
+
+    const token = jwt.sign({ email }, jwtSecret, {
+      expiresIn: '7d',
+    });
+
+    user.authentication.token = token;
+    await user.save();
+
+    res.status(200).json({ message: 'Login successful', user });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal server error' });
   }
 };
 
