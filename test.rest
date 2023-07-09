@@ -1,6 +1,10 @@
 GET http://localhost:5000/user/649056314656199bf5923662
 
 ###
+
+GET http://localhost:5000/user
+
+###
 PATCH  http://localhost:5000/user/6484f28672d93d676ed6fd67
 Content-Type: application/json
 

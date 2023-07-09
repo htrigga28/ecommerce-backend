@@ -70,6 +70,8 @@ const login = async (req: Request, res: Response) => {
       '+authentication.password +authentication.token'
     );
 
+    const userId = user?._id;
+
     if (!user) {
       return res.status(400).json({ message: "User doesn't exist" });
     }
@@ -91,14 +93,20 @@ const login = async (req: Request, res: Response) => {
       return res.status(400).json({ message: 'Already logged in' });
     }
 
-    const token = jwt.sign({ email }, jwtSecret, {
-      expiresIn: '7d',
-    });
+    const token = jwt.sign(
+      { email: user.email, userId: user._id, name: user.fullName },
+      jwtSecret,
+      {
+        expiresIn: '7d',
+      }
+    );
 
     user.authentication.token = token;
     await user.save();
 
-    res.status(200).json({ message: 'Login successful', user });
+    res
+      .status(200)
+      .json({ message: 'Login successful', token: user.authentication.token });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Internal server error' });

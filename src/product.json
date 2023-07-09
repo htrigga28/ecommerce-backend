@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Gray Couch With Throw Pillows",
+        "description": "Subham Majumder",
+        "price": 18.21,
+        "imageUrl": "https://images.pexels.com/photos/3614082/pexels-photo-3614082.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Brown Padded Chair",
+        "description": "Hemanth Nirujogi",
+        "price": 62.39,
+        "imageUrl": "https://images.pexels.com/photos/2495555/pexels-photo-2495555.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Potted Plants Beside White and Brown Folding Chair",
+        "description": "Anna Shvets",
+        "price": 80.07,
+        "imageUrl": "https://images.pexels.com/photos/3771691/pexels-photo-3771691.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Creative composition of comfortable yellow armchair with soft cushion and round wooden table with green home plant in pot against white wall in light apartment or flat with wooden floor",
+        "description": "Ksenia Chernaya",
+        "price": 95.38,
+        "imageUrl": "https://images.pexels.com/photos/3965520/pexels-photo-3965520.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Living Room With Rustic Theme",
+        "description": "Vlada Karpovich",
+        "price": 61.06,
+        "imageUrl": "https://images.pexels.com/photos/4050318/pexels-photo-4050318.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Two White and Green Floral Padded Sofa Chairs Next to Wall in Room",
+        "description": "Gustavo Peres",
+        "price": 89.13,
+        "imageUrl": "https://images.pexels.com/photos/1885562/pexels-photo-1885562.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Two Orange Armchairs and Assorted-color Heart Wall Decors",
+        "description": "Emre Can Acer",
+        "price": 97.14,
+        "imageUrl": "https://images.pexels.com/photos/2079293/pexels-photo-2079293.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Flower Vase On Table",
+        "description": "Mitchell Henderson",
+        "price": 62.24,
+        "imageUrl": "https://images.pexels.com/photos/2098913/pexels-photo-2098913.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Yellow Chair Near Three Round Mirrors",
+        "description": "Dalila Dalprat",
+        "price": 32.34,
+        "imageUrl": "https://images.pexels.com/photos/2179214/pexels-photo-2179214.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Vacant Gray Leather Tub Chair in Room",
+        "description": "Alex Qian",
+        "price": 53.05,
+        "imageUrl": "https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Potted plants in room near window and armchair",
+        "description": "Rachel Claire",
+        "price": 40.8,
+        "imageUrl": "https://images.pexels.com/photos/4846437/pexels-photo-4846437.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Interior of dining table with chairs and vase near picture",
+        "description": "Rachel Claire",
+        "price": 17.17,
+        "imageUrl": "https://images.pexels.com/photos/4846455/pexels-photo-4846455.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Interior of stylish cafe with wooden counter and stools placed near window",
+        "description": "Maria Orlova",
+        "price": 66.69,
+        "imageUrl": "https://images.pexels.com/photos/4913351/pexels-photo-4913351.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Throw Pillow On Armchair Beside Table",
+        "description": "EVG Kowalievska",
+        "price": 50.6,
+        "imageUrl": "https://images.pexels.com/photos/1366872/pexels-photo-1366872.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Table Beside Window Curtain",
+        "description": "EVG Kowalievska",
+        "price": 97.35,
+        "imageUrl": "https://images.pexels.com/photos/1366879/pexels-photo-1366879.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Beige Floor Lamp with Wooden Tripod",
+        "description": "Vincent Rivaud",
+        "price": 68.55,
+        "imageUrl": "https://images.pexels.com/photos/2876787/pexels-photo-2876787.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Comfortable bed with toys globe and paintings placed on wooden cabinet with wicker boxes and soft white rug with toy house on floor",
+        "description": "Tatiana Syrikova",
+        "price": 93.24,
+        "imageUrl": "https://images.pexels.com/photos/3932930/pexels-photo-3932930.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Interior of room with wicker furniture and wigwam on terrace",
+        "description": "Tatiana Syrikova",
+        "price": 79.57,
+        "imageUrl": "https://images.pexels.com/photos/3932957/pexels-photo-3932957.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "Living room interior with furniture and plants at home",
+        "description": "Charlotte May",
+        "price": 40.48,
+        "imageUrl": "https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    },
+    {
+        "name": "White cabinet with three desks and with potted green plants and framed picture",
+        "description": "Samson Katt",
+        "price": 29.75,
+        "imageUrl": "https://images.pexels.com/photos/5255232/pexels-photo-5255232.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    }
+]
